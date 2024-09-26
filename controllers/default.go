@@ -35,4 +35,8 @@ const (
 	// NamespaceScopedArgoRolloutsController is an environment variable that can be used to configure scope of Argo Rollouts controller
 	// Set true to allow only namespace-scoped Argo Rollouts controller deployment and false for cluster-scoped
 	NamespaceScopedArgoRolloutsController = "NAMESPACE_SCOPED_ARGO_ROLLOUTS"
+
+	KubernetesHostnameLabel = "kubernetes.io/hostname"
+
+	TopologyKubernetesZoneLabel = "topology.kubernetes.io/zone"
 )
