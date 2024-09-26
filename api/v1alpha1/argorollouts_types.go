@@ -52,6 +52,14 @@ type RolloutManagerSpec struct {
 
 	// SkipNotificationSecretDeployment lets you specify if the argo notification secret should be deployed
 	SkipNotificationSecretDeployment bool `json:"skipNotificationSecretDeployment,omitempty"`
+
+	// HA options for High Availability support for Rollouts.
+	HA RolloutManagerHASpec `json:"ha,omitempty"`
+}
+
+type RolloutManagerHASpec struct {
+	// Enabled will toggle HA support globally for RolloutManager.
+	Enabled bool `json:"enabled"`
 }
 
 // ArgoRolloutsNodePlacementSpec is used to specify NodeSelector and Tolerations for Rollouts workloads
